@@ -1,0 +1,98 @@
+@charset "utf-8";
+
+body{
+    margin:0;
+    background-color: black;
+    font-family: sans-serif;
+}
+.conteiner{
+    position: relative;
+    width: 320px;
+    margin: 100px auto 0 auto;
+    perspective: 900px;
+}
+
+.carrossel{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    animation: rotate360 40s infinite forwards linear;
+}
+
+.imagem{
+    position: absolute;
+    width: 290px;
+    height: 187px;
+    top: 40px;
+    left: 10px;
+    right: 10px;
+    background-size: cover;
+    display: flex;
+}
+
+.imagem span{
+    margin: auto;
+    font-size: 1.2em;
+}
+
+@keyframes rotate360 {
+    from{
+        transform: rotateY(0deg);
+    }
+    to{
+        transform: rotateY(-360deg);
+    }
+}
+
+.imagem:nth-child(1){
+    background-image: url(https://i.pinimg.com/236x/0e/c9/5d/0ec95d711624ff157f192c54b24bf97d.jpg);
+    transform: rotateY(0deg) translateZ(430px);
+}
+
+.imagem:nth-child(2){
+    background-image: url(https://i.pinimg.com/564x/ba/86/ae/ba86ae09c093e64e08ecde89a5738d4d.jpg);
+    transform: rotateY(40deg) translateZ(430px);
+}
+.imagem:nth-child(3){
+    background-image: url(https://i.pinimg.com/236x/36/37/3f/36373fcfd578fed1bb0474289c3863c2.jpg);
+    transform: rotateY(80deg) translateZ(430px);
+}
+
+.imagem:nth-child(4){
+    background-image: url(https://i.pinimg.com/736x/c8/e1/de/c8e1de42ac0adffeda2d7fffc82bf9ad.jpg);
+    transform: rotateY(120deg) translateZ(430px);
+}
+
+.imagem:nth-child(5){
+    background-image: url(https://i.pinimg.com/236x/8b/8a/c1/8b8ac1a97dbfc41600bd488bbc478df8.jpg);
+    transform: rotateY(160deg) translateZ(430px);
+}
+
+.imagem:nth-child(6){
+    background-image: url(https://i.pinimg.com/736x/18/69/d9/1869d938bb7307e6ef163d2196f6ee71.jpg);
+    transform: rotateY(200deg) translateZ(430px);
+}
+
+.imagem:nth-child(7){
+    background-image: url(https://i.pinimg.com/736x/7b/a9/ec/7ba9ecb0df3111b4c2c67a58bae42f44.jpg);
+    transform: rotateY(240deg) translateZ(430px);
+}
+
+.imagem:nth-child(8){
+    background-image: url(https://i.pinimg.com/236x/11/96/d8/1196d85af3fcf4de46411bce9bd5125a.jpg);
+    transform: rotateY(280deg) translateZ(430px);
+}
+
+.imagem:nth-child(9){
+    background-image: url(https://i.pinimg.com/564x/96/59/36/965936b5894c1a510316f09bf1bbc9cf.jpg);
+    transform: rotateY(320deg) translateZ(430px);
+}
+
+footer{
+    position: absolute;
+    margin-top: 100vh;
+    transform: translate(-50%);
+    margin-left: 50%;
+    color: white;
+}
